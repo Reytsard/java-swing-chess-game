@@ -49,20 +49,26 @@ public class Main {
         String squareToMove = responseArr[0];
         String squareToPlace = responseArr[1];
 
-//        String[] squareToMoveArr = squareToMove.split("");
-//        int col = letterRowToNumber(squareToMoveArr[0]) - 1;
-//        int row = Integer.parseInt(squareToMoveArr[1]);
-//
-//        String[] squareToPlaceArr = squareToPlace.split("");
-//        int colToPlace = letterRowToNumber(squareToPlaceArr[0]) - 1;
-//        int rowToPlace = Integer.parseInt(squareToPlaceArr[1]);
+        String[] squareToMoveArr = squareToMove.split("");
+        int col = letterRowToNumber(squareToMoveArr[0]) - 1;
+        int row = Integer.parseInt(squareToMoveArr[1]) - 1;
+        System.out.println("col: "+col+"; row: "+row);
+        System.out.println(chessboard[row][col]);
+
+        String[] squareToPlaceArr = squareToPlace.split("");
+        int colToPlace = letterRowToNumber(squareToPlaceArr[0]) - 1;
+        int rowToPlace = Integer.parseInt(squareToPlaceArr[1]) - 1;
+        System.out.println("col: "+colToPlace+"; row: "+rowToPlace);
+        System.out.println(chessboard[rowToPlace][colToPlace]);
+
+
 
         //todo: create swapping for pieces
         //no validation yet
 
-//        String temp = chessboard[rowToPlace][colToPlace ];
-//        chessboard[rowToPlace][colToPlace ] = chessboard[row][col];
-//        chessboard[row][col] = temp;
+        String temp = chessboard[rowToPlace][colToPlace];
+        chessboard[rowToPlace][colToPlace] = chessboard[row][col];
+        chessboard[row][col] = temp;
 
     }
 
@@ -94,13 +100,13 @@ public class Main {
     }
 
     public void displayBoard(String[][] board) {
-        for (int i = board.length - 1; i>= 0; i--) {
-            System.out.printf("%-4d", i+1);
-            for (int j = 0; j<board[i].length;j++) {
+        for (int i = board.length - 1; i >= 0; i--) {
+            System.out.printf("%-4d", i + 1);
+            for (int j = 0; j < board[i].length; j++) {
                 System.out.printf("%-4s", board[i][j]);
             }
             System.out.println();
         }
-        System.out.printf("%-4s%-4s%-4s%-4s%-4s%-4s%-4s%-4s%-4s\n","x","a","b","c","d","e","f","g","h");
+        System.out.printf("%-4s%-4s%-4s%-4s%-4s%-4s%-4s%-4s%-4s\n", "x", "a", "b", "c", "d", "e", "f", "g", "h");
     }
 }
