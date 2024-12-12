@@ -1,26 +1,26 @@
 package Client.Model;
 
 public class ChessPiece  {
-    private String name;
+    private String color;
     private String annotation;
     private int value;
     public ChessPiece(){
-        name = "";
+        color = "white";
         annotation = "";
         value = 0;
     }
     public ChessPiece(String name, int value, String annotation){
-        this.name = name;
+        this.color = name;
         this.value = value;
         this.annotation = annotation;
     }
 
-    public String getName() {
-        return name;
+    public String getColor() {
+        return color;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setColor(String name) {
+        this.color = name;
     }
 
     public String getAnnotation() {

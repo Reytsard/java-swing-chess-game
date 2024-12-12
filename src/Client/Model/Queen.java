@@ -1,7 +1,7 @@
 package Client.Model;
 
 public class Queen extends ChessPiece{
-    public Queen(String name, int value, String annotation){
-        super(name, value, annotation);
+    public Queen(String color, int value, String annotation){
+        super(color, value, annotation);
     }
 }

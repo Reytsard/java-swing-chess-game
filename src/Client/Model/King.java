@@ -1,7 +1,7 @@
 package Client.Model;
 
 public class King extends ChessPiece{
-    public King(String name, int value, String annotation){
-        super(name, value, annotation);
+    public King(String color, int value, String annotation){
+        super(color, value, annotation);
     }
 }

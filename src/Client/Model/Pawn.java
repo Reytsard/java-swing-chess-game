@@ -1,7 +1,7 @@
 package Client.Model;
 
 public class Pawn extends ChessPiece{
-    public Pawn(String name, int value, String annotation){
-        super(name, value, annotation);
+    public Pawn(String color, int value, String annotation){
+        super(color, value, annotation);
     }
 }
